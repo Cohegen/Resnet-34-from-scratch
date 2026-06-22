@@ -78,6 +78,8 @@ Each residual block contains:
 
 The input is passed through the convolutional layers to compute the residual function (F(x)), while the skip connection carries the original input (x) directly to the output.
 
+![output:](https://github.com/Cohegen/Resnet-34-from-scratch/blob/main/assets/residualBlock.png)
+
 The final output of the block is:
 
 [
