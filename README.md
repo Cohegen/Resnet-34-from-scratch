@@ -66,9 +66,9 @@ class ResidualBlock(nn.Module):
 ### Model information
 - In this project, I have re-implemented resnet-34 meaning our model has 34 layers.
 - Our model is divided into several stage:
-       - First stage : consists of 3 residual blocks, each with 2 convolution layers of 64 filters and an identity skip connection.
-       - Second stage: consists of 4 residual blocks, each with 2 convolution layers of 128 filters, that uses 1x1 projection or padding.
-       - Third stage : consists of 6 residual blocks, each with 2 convolution layers of 256 filters.
-       - Fourth stage: consists of 3 residual blocks, each with 2 convultion layers of 512 filters.
-       - Output stage: where feature maps are passed through a global average pooling followed by a fully connected layer with
+       * First stage : consists of 3 residual blocks, each with 2 convolution layers of 64 filters and an identity skip connection.
+       * Second stage: consists of 4 residual blocks, each with 2 convolution layers of 128 filters, that uses 1x1 projection or padding.
+       * Third stage : consists of 6 residual blocks, each with 2 convolution layers of 256 filters.
+       * Fourth stage: consists of 3 residual blocks, each with 2 convultion layers of 512 filters.
+       * Output stage: where feature maps are passed through a global average pooling followed by a fully connected layer with
        softmax for classification.
