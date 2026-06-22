@@ -149,6 +149,8 @@ class ResidualBlock(nn.Module):
 
 In this project, I re-implemented **ResNet-34**, which consists of 34 learnable layers.
 
+![output:](https://github.com/Cohegen/Resnet-34-from-scratch/blob/main/assets/architectureComparison.png)
+
 The network is organized into four stages of residual blocks:
 
 ### Stage 1
