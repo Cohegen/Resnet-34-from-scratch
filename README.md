@@ -14,6 +14,8 @@ Before diving into the details of the **ResNet** architecture, it is important t
 
 Prior to the development of ResNet, researchers believed that increasing the depth of a neural network would naturally improve its performance, since deeper networks can learn more complex representations. However, experiments showed that simply adding more layers did not always lead to better results.
 
+![output:](https://github.com/Cohegen/Resnet-34-from-scratch/blob/main/assets/resnet-1.webp)
+
 Researchers observed a phenomenon known as the **degradation problem**. The degradation problem occurs when deeper networks achieve **higher training error** than their shallower counterparts. In theory, a deeper network should perform at least as well as a shallower network because it can learn the same function plus additional transformations. However, optimization becomes increasingly difficult as network depth grows.
 
 Another challenge encountered in deep neural networks is the **vanishing and exploding gradient problem**.
