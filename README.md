@@ -1,5 +1,4 @@
 # ResNet-34 From Scratch
-
 PyTorch implementation of a ResNet-style model for FashionMNIST.
 
 ## Files
