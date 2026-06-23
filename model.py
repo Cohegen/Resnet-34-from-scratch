@@ -3,25 +3,21 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class ResidualBlock(nn.Module):
-  def __init__(self,in_shape,out_shape,stride=1):
+  def __init__(self, in_shape, out_shape, stride=1):
     super().__init__()
     self.conv1 = nn.Sequential(
-        nn.Conv2d(in_shape,out_shape,kernel_size=3,padding=1,bias=False),
+        nn.Conv2d(in_shape, out_shape, kernel_size=3, stride=stride, padding=1, bias=False),
         nn.BatchNorm2d(out_shape),
         nn.ReLU(inplace=True)
     )
     self.conv2 = nn.Sequential(
-        nn.Conv2d(out_shape,out_shape,kernel_size=3,padding=1,bias=False),
+        nn.Conv2d(out_shape, out_shape, kernel_size=3, padding=1, bias=False),
         nn.BatchNorm2d(out_shape),
-       
     )
-    #projection shortcut if there's dimension mismatch
-    if in_shape != out_shape:
-      self.shortcut = nn.Conv2d(
-          in_shape,
-          out_shape,
-          kernel_size=1,
-          bias=False
+    if stride != 1 or in_shape != out_shape:
+      self.shortcut = nn.Sequential(
+          nn.Conv2d(in_shape, out_shape, kernel_size=1, stride=stride, bias=False),
+          nn.BatchNorm2d(out_shape),
       )
     else:
         self.shortcut = nn.Identity()
